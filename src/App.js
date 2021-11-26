@@ -30,21 +30,18 @@ function App() {
           text="GEC Marconi Avionics"
           src="https://cdn.rochesteravionicarchives.co.uk/img/catalog/GEC-Marconi_Avionics.jpg"
           alt="GEC Marconi Avionics"
-          credit="Software Engineer"
         />
           <ImageEvent
           date="1993"
           text="Special Telephone Systems"
           src=""
           alt=""
-          credit="Software Engineer"
         />
         <ImageEvent
           date="1995"
           text="Moldflow"
           src="https://cdn.worldvectorlogo.com/logos/moldflow.svg"
           alt="Moldflow"
-          credit="Director Software Engineering"
         />
 
         {moldflow.map((project)=> {
@@ -56,7 +53,6 @@ function App() {
           text="Autodesk"
           src="https://brand.autodesk.com/app/uploads/2021/04/alternate-logo-1.svg"
           alt="Autodesk"
-          credit="Senior Software Architects"
         />
 
       </Events>
