@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+
+.Collapsible__trigger:after {
+    content: ' \2193';
+    transition: transform 300ms;
+}
+
+.Collapsible__trigger.is-open:after {
+  content: ' \2191';
+  transition: transform 300ms;
+}

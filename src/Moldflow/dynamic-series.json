@@ -2,9 +2,13 @@
     "name" : "Dynamic Series",
     "role" : "Software engineer",
     "year" : 1995,
-    "team" : 5,
+    "team" : 2,
     "tagline" : "Moldflow simulation software suite",
-    "details" : "",
+    "details" : [
+        "Working in a small team of just 2 people, porting Moldflows Unix based software to Windows NT and 95",
+        "Responsible for all elements, porting code, build & make systems, deployment and installation"
+    ],
     "image" : "",
-    "url" : "" 
+    "url" : "",
+    "skils": [ "C", "C++", "Win32", "Unix", "X11", "Motif"]
 }

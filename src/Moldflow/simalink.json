@@ -1,9 +1,9 @@
 { 
-    "name" : "SDRC Ideas - Plastics Simulation ",
+    "name" : "Simalink",
     "role" : "Software engineer",
-    "year" : 1995,
+    "year" : 2001,
     "team" : 5,
-    "tagline" : "Integration of Moldflow to SDRC",
+    "tagline" : "Moldflow simulation to shop floor data exchange",
     "details" : "",
     "image" : "",
     "url" : "" 
