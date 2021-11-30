@@ -1,7 +1,7 @@
 { 
     "name" : "Matrix / Altanium",
     "role" : "Software engineer",
-    "year" : 2001,
+    "date" : 2001,
     "team" : 5,
     "tagline" : "Hot runner controller for injection molding",
     "details" : "",

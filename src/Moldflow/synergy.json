@@ -1,7 +1,7 @@
 { 
     "name" : "Synergy",
     "role" : "Software engineer",
-    "year" : 2002,
+    "date" : 2002,
     "team" : 5,
     "tagline" : "Moldflow & CMold integration, new pre-post processor",
     "details" : "",

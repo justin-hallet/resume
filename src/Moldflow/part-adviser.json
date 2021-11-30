@@ -1,7 +1,7 @@
 { 
     "name" : "Part Adviser",
     "role" : "Software engineer",
-    "year" : 1996,
+    "date" : 1996,
     "team" : 5,
     "tagline" : "Moldflow dual domain simulation",
     "details" : "",

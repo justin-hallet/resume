@@ -1,8 +1,8 @@
 { 
     "name" : "Network License Manager",
-    "role" : "Software engineer",
-    "year" : 2006,
-    "team" : 5,
+    "role" : "Software architect",
+    "date" : 2007,
+    "team" : 8,
     "tagline" : "Token based network licensing for Moldflow",
     "details" : "",
     "image" : "",

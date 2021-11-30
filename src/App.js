@@ -14,9 +14,13 @@ import {
 
 import Collapsible from 'react-collapsible';
 
-import * as moldflow from './Moldflow/projects';
+import * as autodesk from './Autodesk/autodesk';
+import * as moldflow from './Moldflow/moldflow';
+import * as sts from './STS/sts';
+import * as gec from './GEC/gec';
 
-console.log(JSON.stringify(moldflow));
+
+// console.log(JSON.stringify(moldflow));
 
 const cyrb53 = function(str, seed = 0) {
   let h1 = 0xdeadbeef ^ seed, h2 = 0x41c6ce57 ^ seed;
@@ -30,6 +34,131 @@ const cyrb53 = function(str, seed = 0) {
   return 4294967296 * (2097151 & h2) + (h1>>>0);
 };
 
+const key = function(data) {
+  if (!data)
+    return ""
+  return cyrb53(JSON.stringify(data))
+}
+
+const block = function(data) {
+  if (!data)
+    return [];
+  return [ data.join(' ') ];
+}
+
+const value = function(data) {
+  if (!data)
+    return "";
+  return data.toString();
+}
+
+const list = function(data) {
+  if (!data)
+    return [];
+  return [ data.join(', ') ];
+}
+
+const link = function(data) {
+  return (data.url ? <UrlButton href={data.url} target='_blank'>More information...</UrlButton> : <span/>);
+}
+
+const image = function(data) {
+  return (data.image ? 
+    <img 
+      src={window.location.href + "/" + data.image} 
+      alt={data.image}
+      style={{maxWidth: '100%'}}
+    />
+    : <span />)
+}
+
+const details = function(data) {
+  if (data.atoms.length === 0) {
+    return (<TextAtom text={data.tagline} key={key(data)}></TextAtom>)
+  }
+  return (<Collapsible  trigger={value(data.tagline)}>    
+            <p style={{margin: '.5em'}}></p>                          
+            {data.atoms.map((item) => {
+              return <TextAtom text={item} key={key(item)}></TextAtom>
+            })}
+            {image(data)}
+            {link(data)}
+    </Collapsible>)
+}
+
+const event = function(data) {
+  if (data.image) {
+    return (<ImageEvent 
+              date={value(data.date)}
+              text={value(data.title)}
+              src={value(data.image)}
+              alt={value(data.title)}
+              key={key(data)}
+            >
+              {details({ 
+                tagline : data.tagline,
+                atoms : block(data.details),
+                url : data.url
+              })}
+            </ImageEvent>)
+  }
+  else {
+    return (<TextEvent 
+              date={value(data.date)} 
+              text={value(data.title)} 
+              key={key(data)}
+            >
+              {details({ 
+                  tagline : data.tagline,
+                  atoms : block(data.details),
+                  url : data.url
+                })}
+            </TextEvent>)
+  }
+}
+
+const company = function(data) {
+  console.log(JSON.stringify(data))
+  return event({
+    date : data.date,
+    title : data.name,
+    image : data.logo,
+    details : data.details,
+    tagline: data.tagline,
+    url : data.url
+  })
+}
+
+const atoms = function(data) {
+  var atoms = [];
+  if (!data.job) {
+    if (data.role) atoms.push("Role: " + value(data.role));
+    if (data.team) atoms.push("Team size: " + value(data.team));
+    if (data.details) atoms.push("Details: " + block(data.details));
+    if (data.skills) atoms.push("Skills: " + list(data.skills));
+  }
+  return atoms;
+}
+
+const ptype = function(data) {
+  return (!data.job ? "Project: " : "Job: ");
+}
+
+const projects = function(data) {
+  return data.slice(0).reverse().map((item)=> {
+        return <TextEvent date={value(item.date)} text={ptype(item) + value(item.name)} key={key(item)}>
+                <p style={{margin: '.5em'}}></p>     
+                {details({
+                  tagline : item.tagline,
+                  atoms : atoms(item),
+                  url : item.url,
+                  image : item.image
+                })}
+              </TextEvent>  
+  })
+}
+
+
 function App() {
   return (
     <div className="App">
@@ -40,50 +169,19 @@ function App() {
       </header>
       <Timeline>
       <Events>
-      <ImageEvent
-          date="1990"
-          text="GEC Marconi Avionics"
-          src="https://cdn.rochesteravionicarchives.co.uk/img/catalog/GEC-Marconi_Avionics.jpg"
-          alt="GEC Marconi Avionics"
-        />
-          <ImageEvent
-          date="1993"
-          text="Special Telephone Systems"
-          src=""
-          alt=""
-        />
-        <ImageEvent
-          date="1995"
-          text="Moldflow"
-          src="https://cdn.worldvectorlogo.com/logos/moldflow.svg"
-          alt="Moldflow"
-        />
+        
+        {company(autodesk.company)}
+        {projects(autodesk.projects)}
+        
+        {company(moldflow.company)}
+        {projects(moldflow.projects)}
+        
+        {company(sts.company)}
+        {projects(sts.projects)}
 
-        {moldflow.map((project)=> {
-          const atoms = [
-            "Role: " + project.role,
-            "Team size: " + project.team,
-            "Details: " + project.details,
-            "Skills: " + project.skils,
-          ]
-          return <TextEvent date={project.year.toString()} text={project.name} key={cyrb53(project.name)}>
-                    <p style={{margin: '.3em'}}></p>
-                    <Collapsible trigger={project.tagline}>            
-                      <p style={{margin: '.3em'}}></p>                          
-                      {atoms.map((text) => {
-                        return <TextAtom text={text} key={cyrb53(text)}></TextAtom>
-                      })}
-                    </Collapsible>
-                 </TextEvent>  
-        })}
-
-        <ImageEvent
-          date="2008"
-          text="Autodesk"
-          src="https://brand.autodesk.com/app/uploads/2021/04/alternate-logo-1.svg"
-          alt="Autodesk"
-        />
-
+        {company(gec.company)} 
+        {projects(gec.projects)}
+        
       </Events>
     </Timeline>
     </div>

@@ -47,3 +47,7 @@
   content: ' \2191';
   transition: transform 300ms;
 }
+
+.Collapsible__trigger:hover {
+  text-shadow: 2px 2px 2px gray;
+}

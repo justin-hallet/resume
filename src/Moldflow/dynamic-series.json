@@ -1,7 +1,7 @@
 { 
     "name" : "Dynamic Series",
     "role" : "Software engineer",
-    "year" : 1995,
+    "date" : 1995,
     "team" : 2,
     "tagline" : "Moldflow simulation software suite",
     "details" : [
@@ -10,5 +10,5 @@
     ],
     "image" : "",
     "url" : "",
-    "skils": [ "C", "C++", "Win32", "Unix", "X11", "Motif"]
+    "skills": [ "C", "C++", "Win32", "Unix", "X11", "Motif"]
 }

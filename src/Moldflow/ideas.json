@@ -1,7 +1,7 @@
 { 
     "name" : "SDRC Ideas - Plastics Simulation ",
     "role" : "Software engineer",
-    "year" : 1995,
+    "date" : 1995,
     "team" : 5,
     "tagline" : "Integration of Moldflow to SDRC",
     "details" : "",

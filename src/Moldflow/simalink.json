@@ -1,7 +1,7 @@
 { 
     "name" : "Simalink",
     "role" : "Software engineer",
-    "year" : 2001,
+    "date" : 2001,
     "team" : 5,
     "tagline" : "Moldflow simulation to shop floor data exchange",
     "details" : "",

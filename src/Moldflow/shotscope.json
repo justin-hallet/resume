@@ -1,7 +1,7 @@
 { 
     "name" : "ShotScope",
     "role" : "Software engineer",
-    "year" : 2000,
+    "date" : 2000,
     "team" : 5,
     "tagline" : "Shop floor monitoring",
     "details" : "",

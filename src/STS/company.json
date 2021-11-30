@@ -1,0 +1,11 @@
+{ 
+    "name" : "Special Telephone Systems",
+    "date" : "1994 - 1995",
+    "details" : [
+        "Inventors of automated call distribution (ACD), controlling multiple PBX systems.",
+        "Monitoring call centres using Windows based clients, SQL databases, and OS9 based controllers"
+    ],
+    "tagline" : "Automated call distribution",
+    "logo" : "",
+    "url" : "https://en.wikipedia.org/wiki/Automatic_call_distributor"
+}

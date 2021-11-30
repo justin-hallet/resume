@@ -1,10 +1,10 @@
 { 
     "name" : "Internet Enable - Part Adviser",
     "role" : "Software engineer",
-    "year" : 1998,
-    "team" : 5,
+    "date" : 1998,
+    "team" : 2,
     "tagline" : "Internet payment, per model token licensing",
     "details" : "",
-    "image" : "",
+    "image" : "plasticszone.jpg",
     "url" : "" 
 }

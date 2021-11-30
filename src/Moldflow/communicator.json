@@ -1,10 +1,11 @@
 { 
     "name" : "Communicator",
     "role" : "Software engineer",
-    "year" : 2004,
-    "team" : 5,
+    "date" : 2004,
+    "team" : 1,
     "tagline" : "Standalone results viewer for Moldflow",
     "details" : "",
-    "image" : "",
-    "url" : "" 
+    "image" : "mfrv.jpg",
+    "url" : "https://www.autodesk.com/products/moldflow/communicator-viewer",
+    "skills" : [ "C++", "MFC", "Windows" ]
 }
