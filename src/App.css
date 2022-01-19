@@ -37,6 +37,10 @@
   }
 }
 
+.Collapsible__trigger {
+  padding: .2em;
+  border: 1px solid transparent;
+}
 
 .Collapsible__trigger:after {
     content: ' \2193';
@@ -49,5 +53,6 @@
 }
 
 .Collapsible__trigger:hover {
-  text-shadow: 2px 2px 2px gray;
+  background: #e1e1e1;
+  border: 1px solid #d0d0d0;
 }

@@ -77,12 +77,14 @@ const details = function(data) {
     return (<TextAtom text={data.tagline} key={key(data)}></TextAtom>)
   }
   return (<Collapsible  trigger={value(data.tagline)}>    
-            <p style={{margin: '.5em'}}></p>                          
-            {data.atoms.map((item) => {
-              return <TextAtom text={item} key={key(item)}></TextAtom>
-            })}
+            <div style={{textAlign: 'left'}}>
+              <p style={{margin: '.5em'}}></p>                          
+              {data.atoms.map((item) => {
+                return <TextAtom text={item} key={key(item)}></TextAtom>
+              })}
+            </div>
             {image(data)}
-            {link(data)}
+            {link(data)}       
     </Collapsible>)
 }
 

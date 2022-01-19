@@ -2,12 +2,19 @@
     "name" : "Moldflow",
     "date" : "1995 - 2008",
     "details" : [
-        "Moldflow is a producer of simulation software for high-end plastic injection molding computer-aided engineering. It is owned by Autodesk.",
+        "<br/><br/>",
+        "Moldflow is a producer of simulation software for high-end plastic injection molding computer-aided engineering.", 
+        "<br/><br/>",
+        "It is owned by Autodesk as of 2008.",
+        "<br/><br/>",
         "Moldflow has two core products: Moldflow Adviser which provides manufacturability guidance and directional feedback for standard part and mold design,",
         "and Moldflow Insight which provides definitive results for flow, cooling, and warpage along with support for specialized molding processes.",
+        "<br/><br/>",
         "In addition, Autodesk produces Moldflow Design, Moldflow CAD Doctor, Moldflow synergy, Moldflow Magics STL Expert,",
         "and Moldflow Structural Alliance that serve as connectivity tools for other CAD and CAE software.",
-        "They also have a free results viewer, Moldflow Communicator."        
+        "<br/><br/>",
+        "They also have a free results viewer, Moldflow Communicator.",
+        "<br/><br/>"     
     ],
     "tagline" : "Plastic injection and compression mold simulation for design and manufacturing",
     "logo" : "https://cdn.worldvectorlogo.com/logos/moldflow.svg",
