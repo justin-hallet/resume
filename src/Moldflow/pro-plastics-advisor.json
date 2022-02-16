@@ -3,8 +3,8 @@
     "role" : "Software engineer",
     "date" : 1996,
     "team" : 1,
-    "tagline" : "Integration of Moldflow to PTC",
-    "details" : "",
-    "image" : "",
-    "url" : "" 
+    "tagline" : "Integration of Moldflow to PTC Pro-Engineer",
+    "details" : [ "Rebadging, rebanding, Moldflow Part Adviser as custom product for PTC" ],
+    "image" : "ppa.jpg",
+    "url" : "https://www.solver.ru/engl/products/cadprod/proe/plastic-advisor.asp" 
 }

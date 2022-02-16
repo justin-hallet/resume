@@ -4,7 +4,7 @@
     "date" : 1997,
     "team" : 1,
     "tagline" : "Integration of Moldflow to Solidworks",
-    "details" : "",
-    "image" : "",
-    "url" : "" 
+    "details" : [ "Brand new custom integration, Solidworks GOLD partner integration." ],
+    "image" : "mfx.jpg",
+    "url" : "https://www.youtube.com/watch?v=Nwmu2e7Rv7I" 
 }
